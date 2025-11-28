@@ -1,0 +1,71 @@
+@use "variables" as *;
+
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.header__nav-link {
+  position: relative;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: $color-muted;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: $color-accent;
+  }
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: $color-accent;
+    transition: width 0.25s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: $bp-tablet) {
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba($color-bg, 0.96);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 2.4rem 0;
+    text-align: center;
+  }
+
+  .header__checkbox:checked + .header__toggle + .header__nav {
+    max-height: 320px;
+  }
+}
