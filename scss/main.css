@@ -62,7 +62,8 @@ main {
   width: 100%;
   z-index: 999;
   background: rgba(11, 16, 32, 0.85);
-  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+          backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(169, 176, 195, 0.15);
 }
 .header__inner {
@@ -78,6 +79,7 @@ main {
   letter-spacing: 0.28em;
   font-weight: 700;
   text-transform: uppercase;
+  margin-right: 2.5rem;
 }
 .header__checkbox {
   display: none;
@@ -245,8 +247,8 @@ main {
   gap: 1rem;
 }
 .hero__image-wrapper {
-  max-width: 6px;
-  align-self: center;
+  max-width: 220px;
+  margin: 0 auto;
   border-radius: 999px;
   overflow: hidden;
   border: 1px solid rgba(169, 176, 195, 0.4);
@@ -474,7 +476,6 @@ main {
 .header__nav-list {
   list-style: none;
   margin: 0;
-  padding: 0;
   display: flex;
   gap: 2.4rem;
   align-items: center;
@@ -525,6 +526,4 @@ main {
   .header__checkbox:checked + .header__toggle + .header__nav {
     max-height: 320px;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

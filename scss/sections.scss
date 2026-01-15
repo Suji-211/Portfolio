@@ -43,12 +43,12 @@
   }
 
   &__image-wrapper {
-    max-width: 6px;
-    align-self: center;
-    border-radius: 999px;
-    overflow: hidden;
-    border: 1px solid rgba($color-muted, 0.4);
-  }
+  max-width: 220px;        // reasonable size
+  margin: 0 auto;          // centers horizontally
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba($color-muted, 0.4);
+}
 
   &__image {
     width: 100%;
